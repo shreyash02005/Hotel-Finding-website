@@ -51,6 +51,38 @@
         .date-picker {
             margin-left: 10px;
         }
+          .grad {
+          background-image: linear-gradient(to bottom, #fff, #dcdada);
+          background-size: 100% 200px;
+          background-position: 0% 100%;
+        }
+        .bgm {
+          background-image: url('/bgm2.jpg');
+          background-size: cover;
+          background-position: center;
+          height: 100vh; /* adjust the height to your liking */
+        }
+        .main2 {
+          color: black;
+          padding-top: 100px;
+          padding-left: 100px;
+        }
+        .card {
+         margin-left: 100px;
+         margin-top: 50px;
+        }
+        .footer {
+          background-color: #333; /* same color as the navbar */
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          clear: both;
+        }
+        .mail {
+          width: 20rem;
+          margin-right: 100px;
+          margin-top: 25px;
+        }
     </style>
 </head>
 <body>
@@ -82,6 +114,7 @@
         </div>
     </nav>
     <main>
+      <div class="grad">
         <div class="container-fluid" style="padding: 2em 1em;">
             <h1 style="font-size: 24px; margin-bottom: 10px;">Save up to 40% on your next trip</h1>
             <div class="search-box">
@@ -128,7 +161,35 @@
                 </form>
             </div>
         </div>
+      </div>
+      <div class="bgm">
+        <h2 class="main2">
+          Recently viewed
+        </h2>
+          <div class="card" style="width: 15rem;">
+            <img src="https://images.unsplash.com/photo-1725113114015-7d65ebd4f2bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8" class="card-img-top" alt="Error 404">
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card.
+              </p>
+            </div>
+          </div>
+      </div>
     </main>
+    <footer class="footer">
+      <!-- Add your footer content here -->
+       <div style="text-align: left; font-size: 24px;">
+        <b> Get exclusive inspiration for your next stay <br> subscribe to our newsletter.
+       </b> 
+       </div>
+      <form class="mail" role="search">
+        <input class="form-control me-2" type="email" placeholder="Email address" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <p>
+        &copy; 2023 Your Company Name
+      </p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script>
