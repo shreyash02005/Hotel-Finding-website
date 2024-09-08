@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #262626;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav li {
+        margin-right: 20px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    nav a.active {
+        font-weight: bold;
+    }
+
+    .payment-form {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="number"], input[type="month"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #3e8e41;
+    }
+    .navbar-brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 50px; /* Reduced width */
+    }
+
+    .navbar-brand img {
+        margin-right: 10px;
+    }
+
+    .nav-link-right {
+        text-align: right;
+        margin-left: 10px; /* Added margin to separate favorite from bootstrap icon */
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: #fff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: #fff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: #fff;
+    }
+    .heading {
+        padding-left: 100px;
+        font-size: 30px;
+        padding-top: 50px;
+    }
+    .navy-blue-container {
+        background-color: #091738; /* navy blue */
+        color: #fff; /* white font color */
+        padding-top: 75px;
+        border-radius: 10px;
+        text-align: left; /* add this line to align text to the left */
+        text-decoration: none;
+    }
+    .container {
+        padding-left: 100px;
+        padding-right: 800px;
+        padding-top: 25px;
+        margin-bottom: 20px;
+    }
+    a {
+        color: white;
+    }
+    .container-userDetails {
+    padding-left: 50px;
+    padding-right: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 600px; /* add a maximum width to the container */
+    margin-left: 100px;
+    margin-top: 20px;
+    }
+    .heading-user {
+    font-size: 24px;
+    background-color: #fff; /* add a background color */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+    .container-userDetails form {
+        margin-bottom: 20px; /* add this line to add space between the form and the container */
+    }
+
+    .heading-user:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+        z-index: -1;
+    }
+    input[type="text"], input[type="email"], input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+    .ash-container {
+        background-color: #e8e7e7; /* ash color */
+        padding: 1.5rem; /* add padding to create space */
+        border-radius: 10px; /* add border radius for a smooth look */
+        margin-top: 20px; /* add margin to separate from the previous content */
+        border: 1px solid #000;
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <span class="material-symbols-outlined" style="margin-right: 5px;">favorite</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="heading">
+            <b>Payment Page</b>
+        </div>
+        <div class="container">
+            <div class="navy-blue-container">
+                <!-- your content here -->
+                <div>
+                    &nbsp;&nbsp;
+                    <b style="font-size: 20px;">No intrest on EMI</b>
+                    <br>
+                    &nbsp;&nbsp;
+                    <a href="#" target="_blank" rel="noopener noreferrer"><u>Sign in</u></a>
+                    &nbsp;&nbsp;
+                    <a href="#" target="_blank" rel="noopener noreferrer"><u>Create an account</u></a>    
+                </div>
+            </div>
+        </div>
+        <div class="container-userDetails">
+            <div class="heading-user">
+                <span class="material-symbols-outlined" style="margin-right: 5px;">account_circle</span>
+              <b> Step 1: Your details</b>
+            </div>
+            <form>
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first-name" required>
+              <br><br>
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" required>
+              <br><br>
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required>
+              <br><br>
+              <label for="phone-number">Phone Number:</label>
+              <input type="tel" id="phone-number" name="phone-number" required>
+            </form>
+          </div>
+          <div class="container-userDetails">
+            <div class="heading-user">
+                <span class="material-symbols-outlined" style="margin-right: 5px;">hotel</span>
+              <b> Step 2: Property details</b>
+            </div>
+                <b>Property highlights</b>
+                <br><br>
+                <span class="material-symbols-outlined" style="margin-right: 5px;">directions_car</span>
+                Free parking!
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span class="material-symbols-outlined" style="margin-right: 5px;">wifi</span>
+                Free Wifi
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span class="material-symbols-outlined" style="margin-right: 5px;">restaurant</span>
+                Breakfast included
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span class="material-symbols-outlined" style="margin-right: 5px;">pets</span>
+                Pet friendly
+                <br><br><br>
+                <b>Family Room, Multiple Beds</b>
+                <div class="ash-container">
+                    <!-- your content here -->
+                    <span class="material-symbols-outlined" style="margin-right: 5px; color: #2dab07;">check</span>
+                    <b>Included in your room: </b> &nbsp;&nbsp;&nbsp;
+                    <span class="material-symbols-outlined" style="margin-right: 5px;">restaurant</span>
+                    Breakfast included
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <span class="material-symbols-outlined" style="margin-right: 5px;">wifi</span>
+                    Free Wifi
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="material-symbols-outlined" style="margin-right: 5px; color: #2dab07;">hotel</span>
+                    2 King size Beds
+                </div>
+                <b>Preferences</b>
+                <br>
+                <div style="font-size: 14px;">
+                    Smoking preferences aren’t guaranteed
+                </div> <br>
+                <div class="form-check">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    Smoking
+                  </label>
+                </div>
+          </div>
+        <!-- <section class="payment-form">
+            <h2>Make a Payment</h2>
+            <form id="payment-form">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+                <label for="expiration-date">Expiration Date:</label>
+                <input type="month" id="expiration-date" name="expiration-date" required>
+                <label for="cvv">CVV:</label>
+                <input type="password" id="cvv" name="cvv" required>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+                <button type="submit">Make Payment</button>
+            </form>
+        </section> -->
+    </main>
+    <script src="script.js">
+        const paymentForm = document.getElementById('payment-form');
+
+        paymentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const cardNumber = document.getElementById('card-number').value;
+            const expirationDate = document.getElementById('expiration-date').value;
+            const cvv = document.getElementById('cvv').value;
+            const amount = document.getElementById('amount').value;
+
+            // TO DO: Implement payment gateway API call or backend integration
+            console.log(`Payment details: 
+                Card Number: ${cardNumber}
+                Expiration Date: ${expirationDate}
+                CVV: ${cvv}
+                Amount: ${amount}
+            `);
+        });
+    </script>
+</body>
+</html>
