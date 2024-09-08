@@ -177,6 +177,52 @@
         border: 1px solid #000;
         margin-bottom: 20px;
     }
+    .alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s;
+    }
+
+    .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    border: 1px solid #1f6d05;
+    }
+
+    .alert-dismissible .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem;
+    color: #000;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+    }
+
+    .alert-dismissible .btn-close:hover {
+    color: #000;
+    opacity: 0.75;
+    }
+
+    .alert-dismissible .btn-close:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+    }
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    }
     </style>
 </head>
 <body>
@@ -294,7 +340,16 @@
                   </label>
                 </div>
           </div>
-        <!-- <section class="payment-form">
+          <div class="container-userDetails">
+            <div class="heading-user">
+                <span class="material-symbols-outlined" style="margin-right: 5px;">payments</span>
+              <b> Step 3: Payment Details</b>
+            </div>
+            <div class="alert alert-success" role="alert">
+                Hurry, that’s the cheapest room we have, Book it now.
+            </div>
+          </div>
+        <section class="payment-form">
             <h2>Make a Payment</h2>
             <form id="payment-form">
                 <label for="card-number">Card Number:</label>
@@ -307,7 +362,7 @@
                 <input type="number" id="amount" name="amount" required>
                 <button type="submit">Make Payment</button>
             </form>
-        </section> -->
+        </section>
     </main>
     <script src="script.js">
         const paymentForm = document.getElementById('payment-form');
